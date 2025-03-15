@@ -5,6 +5,7 @@ RUN apt update
 RUN apt install -y git libgl1 libglib2.0-0 python3-pip python3-venv
 RUN git clone https://github.com/derrian-distro/LoRA_Easy_Training_scripts_Backend
 COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x entrypoint.sh
 WORKDIR /LoRA_Easy_Training_scripts_Backend
 RUN python3 installer.py colab
 
