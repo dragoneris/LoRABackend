@@ -7,7 +7,7 @@ RUN git clone https://github.com/derrian-distro/LoRA_Easy_Training_scripts_Backe
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x entrypoint.sh
 WORKDIR /LoRA_Easy_Training_scripts_Backend
-RUN python3 installer.py colab
+RUN yes | python3 installer.py
 
 EXPOSE 8000
 ENTRYPOINT ["/entrypoint.sh"]
